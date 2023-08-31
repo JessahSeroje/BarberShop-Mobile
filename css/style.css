@@ -46,11 +46,15 @@ body {
   margin: 0 auto;
   /* border: 2px solid red; */
 
+  @media screen and (min-width: 428px) {
+    width: 428px;
+  }
+
   @media screen and (min-width: 768px) {
     width: 768px;
   }
 
-  @media and (min-width: 1158px) {
+  @media screen and (min-width: 1158px) {
     width: 1158px;
   }
 }
@@ -76,8 +80,18 @@ body {
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  /* from desktop */
+  /* padding-top: 120px;
+  padding-bottom: 120px; */
+
+  /* mobile */
+  padding-top: 96px;
+  padding-bottom: 96px;
+
+  @media screen and (min-width: 1158px) {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
 }
 
 /* to remove the bullet points in list */
@@ -120,11 +134,18 @@ body {
 .section-title {
   margin-bottom: 20px;
   font-family: Raleway, san-serif;
-  font-size: 42px;
+  /* desktop */
+  /* font-size: 42px; */
+  /* mobile */
+  font-size: 28px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 2.1px;
+
+  @media screen and (min-width: 1158px) {
+    font-size: 42px;
+  }
 }
 
 /* 1. button - doesn't automatically inherit font-family */
@@ -176,9 +197,15 @@ body {
 }
 
 .header-list {
-  /* display: none; */
-  display: flex;
-  gap: 30px;
+  /* display: flex; */
+  /* gap: 30px; */
+
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    gap: 30px;
+  }
 }
 
 .header-link {
@@ -215,8 +242,14 @@ body {
 }
 
 .header-address {
-  margin-left: auto;
-  color: var(--primary-white-color);
+  /* margin-left: auto;
+  color: var(--primary-white-color); */
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    margin-left: auto;
+    color: var(--primary-white-color);
+  }
 }
 
 .header-address-link {
@@ -238,10 +271,19 @@ body {
 }
 
 .header-button {
-  margin-left: 40px;
+  /* margin-left: 40px;
   margin-right: 40px;
   color: var(--primary-white-color);
-  background-color: transparent;
+  background-color: transparent; */
+
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    margin-left: 40px;
+    margin-right: 40px;
+    color: var(--primary-white-color);
+    /* background-color: transparent; */
+  }
 }
 
 /* Hero Section */
@@ -252,23 +294,32 @@ body {
 
   /* ---magkaiba itong options ko-- */
 
-  /* background-image: url(../images/hero-bg.jpg),
+  background-image: url(../images/hero-bg.jpg),
     linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
   background-repeat: no-repeat;
-  background-position: right; */
-
+  background-position: right;
+  background-size: cover;
   /* background-size: 80% 100%; */
+
+  @media screen and (min-width: 768px) {
+    background-image: unset;
+  }
 }
+
 .hero-container {
   display: flex;
 }
 
 .hero-socials {
-  width: 100px;
-  display: flex;
-  align-items: flex-end;
-  padding-left: 27px;
-  padding-bottom: 40px;
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    width: 100px;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 27px;
+    padding-bottom: 40px;
+  }
 }
 
 .hero-list {
@@ -311,14 +362,17 @@ body {
 
 .hero-wrap {
   flex-grow: 1;
-  padding: 272px 100px 208px;
-
-  background-image: url(../images/hero-bg.jpg),
-    linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  padding: 272px 0px 208px;
+  /* padding: 272px 100px 208px; */
   /* background-size: 70% 100%; */
+
+  @media screen and (min-width: 768px) {
+    background-image: url(../images/hero-bg.jpg),
+      linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
 }
 
 /* .hero-item:first-child {
@@ -331,11 +385,17 @@ body {
 .hero-title {
   color: var(--primary-white-color);
   font-family: Raleway;
-  font-size: 72px;
+  /* font-size: 72px; */
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 3.6px;
+
+  font-size: 36px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 56px;
+  }
 }
 .hero-bottom-text {
   color: var(--primary-gray-color);
@@ -541,12 +601,19 @@ body {
 .barbers-top-text {
   color: var(--primary-black-color);
 }
+
 .barbers-title {
   color: var(--primary-black-color);
 }
+
 .barbers-list {
   display: flex;
   gap: 30px;
+  flex-wrap: wrap;
+
+  @media screen and (mid-width: 768px) {
+    flex-wrap: nowrap;
+  }
 }
 .barbers-item {
   width: calc(100% - 60px / 3);
